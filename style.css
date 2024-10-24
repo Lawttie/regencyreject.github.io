@@ -1,0 +1,535 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cutive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+
+/* general use css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: #d4d4d4;
+}
+
+/* navbar css */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.493);
+}
+
+#navbar-logo {
+    color: #000000;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Abril Fatface';
+    padding-right: 10px;
+}
+
+#navbar a {
+    font-family: 'Abril Fatface';
+}
+
+#navbar-logo img {
+    width: 75px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul a {
+	color: #000000;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 32px;
+	padding: 0 15px;
+}
+
+#navbar ul li {
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0 10px;
+}
+
+#navbar ul li:hover {
+	background: #a0a0a07c;
+}
+
+#navbar ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #a0a0a07c;
+	padding: 0;
+	z-index: 999;
+}
+
+#navbar ul ul li {
+	float: none;
+	width: 300px;
+	background: #a0a0a07c;
+}
+
+#navbar ul ul a {
+	line-height: 120%;
+	font-size: 0.8rem;
+}
+
+#navbar ul ul ul {
+	top: 0;
+	left: 100%;
+}
+
+#navbar ul li:hover > ul {
+	display: block;
+}
+
+/* banner css */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    padding: 0 5%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-bottom: 10px solid #000;
+}
+
+.banner-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: translate3d(0,0,0) scale(1.25);
+}
+
+.banner h1 {
+    color: #eee;
+    margin: 0;
+    font-size: 5rem;
+    line-height: 20rem;
+    text-shadow: 0 0 1rem black;
+    font-family: 'Abril Fatface';
+}
+
+.banner h2 {
+    text-shadow: 0 0 1rem rgb(255, 255, 255);
+    font-size: 3rem;
+    font-family: 'Abril Fatface';
+}
+
+/* contents sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 40.5rem;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    padding: 10px;
+    width: 250px;
+    height: 95vh;
+    background-color: #dadada;
+    padding-left: 20px;
+    border: 1px solid #cecece;
+    overflow-y: auto;
+}
+
+/* archive cards */
+
+.archive {
+    max-width: 1500px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.archive h1 {
+    text-align: center;
+    font-family: 'Abril Fatface';
+    font-size: 3rem;
+    color: #f5f5f5;
+    text-shadow: 0 0 1rem rgb(0, 0, 0);
+}
+
+.archive-cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 330px;
+    height: 400px;
+}
+
+.card img {
+    height: 60%;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card_content {
+    flex-grow: 1;
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #8d97ef 40%, #4f47c2 100%);
+  }
+  
+.card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  
+.card_text {
+    color: #ffffff;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+  }
+
+.btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+  
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+/* contents & sidebar */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-top: -40.5rem;
+    padding-top: 40.5rem;
+}
+
+.sidebar {
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 250px;
+    height: 500px;
+    background: linear-gradient(to bottom, #e4e4e4 40%, #adadad 100%);
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    border: none;
+    display: inline-block;
+    position: sticky;
+    top: 90px;
+    vertical-align: top;
+}
+
+.sidebar h1 {
+    font-size: 1.3rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    position: relative;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .sidebar ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+  }
+  
+  .sidebar ul li ul.dropdown li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li ul.dropdown li a {
+    color: #1a1a1a;
+  }
+  
+  .sidebar ul li ul.dropdown li a:hover {
+    color: #000;
+  }
+
+  .sidebar ul li ul.dropdown.open {
+    display: block;
+  }
+  
+  .dropdown-toggle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdown-toggle.open {
+    transform: rotate(180deg);
+  }
+
+  .current {
+    text-decoration: underline;
+    color: blue;
+  }
+
+.main {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 1200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main:before, .main:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* home page */
+
+.banner-background.home-bg {
+    background: url(/images/home-bg-2.png) no-repeat;
+    background-size: cover;
+}
+
+/* american century */
+
+.banner-background.ac-bg {
+    background: url(/images/ac-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* tudor era */
+
+.banner-background.tudor-bg {
+    background: url(/images/tudor-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.banner-background.weimar-bg {
+    background: url(/images/weimar-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* timeline */
+
+.timeline {
+    display: flex;
+    margin-top: 50 auto;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 700px;
+    position: relative;
+}
+
+.timeline__content-title {
+    font-weight: normal;
+    font-size: 66px;
+    margin: -10px 0 0 0;
+    transition: 0.4s;
+    padding: 0 10px;
+    text-shadow: 0 0 1rem rgb(0, 0, 0);
+    box-sizing: border-box;
+    font-family: "Pathway Gothic One", sans-serif;
+    color: #fff;
+}
+
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Cardo;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.timeline-item {
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+  padding: 40px 0;
+  opacity: 0.3;
+  filter: blur(2px);
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-family: "Pathway Gothic One", sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px);
+}
+
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  padding-right: 15px;
+}
+
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.timeline-item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+  opacity: 1;
+}
+
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(99, 99, 99, 0.8);
+  content: "";
+}
+
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.timeline-header__title {
+  color: #fff;
+  font-size: 46px;
+  font-family: Cardo;
+  font-weight: normal;
+  margin-top: 2rem;
+}
+
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+
